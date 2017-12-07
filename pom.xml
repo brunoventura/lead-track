@@ -7,6 +7,7 @@
     <groupId>com.perone</groupId>
     <artifactId>lead-track</artifactId>
     <version>1.0</version>
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>
