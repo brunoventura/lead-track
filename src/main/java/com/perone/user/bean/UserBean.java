@@ -14,7 +14,6 @@ public class UserBean {
 
     public User getUserById(Long userId) {
         User user = userDAO.get(userId);
-
         return user;
     }
 

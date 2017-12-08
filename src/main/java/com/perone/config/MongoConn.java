@@ -33,13 +33,13 @@ public class MongoConn {
         this.morphia = new Morphia();
         this.morphia.mapPackage(MONGO_ENTITY_PACKAGE);
 
+        this.datastore = morphia.createDatastore(mongoClient, MONGO_DATABASE_NAME);
+        this.datastore.ensureIndexes(true);
+
         Reflections reflections = new Reflections(MONGO_ENTITY_PACKAGE);
         for (Class<?> aClass : reflections.getTypesAnnotatedWith(Entity.class)) {
             this.morphia.map(aClass);
         }
-
-        this.datastore = morphia.createDatastore(mongoClient, MONGO_DATABASE_NAME);
-        this.datastore.ensureIndexes(true);
     }
 
     public static MongoClient getMongoClient() {
