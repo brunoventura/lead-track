@@ -1,6 +1,5 @@
 package com.perone.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.internal.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,7 +29,6 @@ public class User implements Serializable {
     @Size(min = 4, max = 100)
     private String email;
 
-    @JsonIgnore
     private String password;
 
 }
