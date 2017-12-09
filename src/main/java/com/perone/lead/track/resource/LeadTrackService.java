@@ -1,7 +1,7 @@
-package com.perone.user.resource;
+package com.perone.lead.track.resource;
 
-import com.perone.entity.User;
-import com.perone.user.bean.UserBean;
+import com.perone.entity.LeadTrack;
+import com.perone.lead.track.bean.LeadTrackBean;
 import lombok.NoArgsConstructor;
 
 import javax.ws.rs.GET;
@@ -10,13 +10,13 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @NoArgsConstructor
-public class UserService {
+public class LeadTrackService {
 
-    private UserBean bean;
+    private LeadTrackBean bean;
 
-    private User entity;
+    private LeadTrack entity;
 
-    public UserService(User entity, UserBean bean) {
+    public LeadTrackService(LeadTrack entity, LeadTrackBean bean) {
         this.bean = bean;
         this.entity = entity;
     }
