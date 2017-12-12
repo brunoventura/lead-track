@@ -1,8 +1,9 @@
-package com.perone.lead.track.resource;
+package com.perone.com.perone.rest.lead.track.resource;
 
+import com.perone.com.perone.rest.lead.track.bean.LeadTrackBean;
 import com.perone.entity.LeadTrack;
-import com.perone.lead.track.bean.LeadTrackBean;
 import lombok.Data;
+import org.bson.types.ObjectId;
 
 import javax.inject.Inject;
 import javax.validation.constraints.NotNull;
@@ -19,7 +20,7 @@ public class LeadTrackCatalogService {
     private LeadTrackBean bean;
 
     @Path("{id}")
-    public LeadTrackService get(@NotNull @PathParam("id") String id) throws Exception {
+    public LeadTrackService get(@NotNull @PathParam("id") ObjectId id) throws Exception {
         LeadTrack result = this.bean.getLeadTrackById(id);
         return new LeadTrackService(result, this.bean);
     }
@@ -33,7 +34,7 @@ public class LeadTrackCatalogService {
 
     @Data
     public static class ReceiveLeadTrackDTO {
-        private String idLead;
+        private ObjectId idLead;
         private String url;
     }
 

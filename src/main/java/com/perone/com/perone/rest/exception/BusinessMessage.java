@@ -1,4 +1,4 @@
-package com.perone.exception;
+package com.perone.com.perone.rest.exception;
 
 import lombok.Data;
 

@@ -1,5 +1,7 @@
 package com.perone.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.perone.entity.helper.ObjectIdJsonSerializer;
 import com.sun.istack.internal.NotNull;
 import lombok.*;
 import org.bson.types.ObjectId;
@@ -21,6 +23,7 @@ public class Lead implements Serializable {
 
     @Id
     @NotNull
+    @JsonSerialize(using = ObjectIdJsonSerializer.class)
     private ObjectId id;
 
     @NotNull
@@ -35,10 +38,11 @@ public class Lead implements Serializable {
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    @EqualsAndHashCode(of = {"idLead"})
+    @EqualsAndHashCode()
     public static class LeadRef {
 
         @NotNull
+        @JsonSerialize(using = ObjectIdJsonSerializer.class)
         private ObjectId id;
 
     }

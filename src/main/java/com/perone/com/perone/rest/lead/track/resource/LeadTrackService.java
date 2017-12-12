@@ -1,7 +1,7 @@
-package com.perone.lead.track.resource;
+package com.perone.com.perone.rest.lead.track.resource;
 
 import com.perone.entity.LeadTrack;
-import com.perone.lead.track.bean.LeadTrackBean;
+import com.perone.com.perone.rest.lead.track.bean.LeadTrackBean;
 import lombok.NoArgsConstructor;
 
 import javax.ws.rs.GET;

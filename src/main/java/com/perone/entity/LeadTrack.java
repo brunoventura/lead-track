@@ -1,6 +1,7 @@
 package com.perone.entity;
 
-import com.perone.entity.Lead.LeadRef;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.perone.entity.helper.ObjectIdJsonSerializer;
 import com.sun.istack.internal.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,9 +26,11 @@ public class LeadTrack implements Serializable {
 
     @Id
     @NotNull
+    @JsonSerialize(using = ObjectIdJsonSerializer.class)
     private ObjectId id;
 
     @NotNull
+    @JsonSerialize(using = ObjectIdJsonSerializer.class)
     private ObjectId idLead;
 
     @NotNull

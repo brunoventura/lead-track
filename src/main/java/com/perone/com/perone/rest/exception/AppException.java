@@ -1,4 +1,4 @@
-package com.perone.exception;
+package com.perone.com.perone.rest.exception;
 
 public class AppException extends Exception {
 

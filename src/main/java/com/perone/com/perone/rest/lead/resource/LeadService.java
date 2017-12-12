@@ -1,7 +1,7 @@
-package com.perone.lead.resource;
+package com.perone.com.perone.rest.lead.resource;
 
 import com.perone.entity.Lead;
-import com.perone.lead.bean.LeadBean;
+import com.perone.com.perone.rest.lead.bean.LeadBean;
 import lombok.NoArgsConstructor;
 
 import javax.ws.rs.GET;
